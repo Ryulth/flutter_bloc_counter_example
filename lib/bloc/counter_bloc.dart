@@ -24,7 +24,7 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
       final sum = count + event.num;
       yield CounterLoaded(sum);
     } else {
-      yield CounterLoaded(event.num);
+      yield CounterLoaded(-event.num);
     }
   }
 
